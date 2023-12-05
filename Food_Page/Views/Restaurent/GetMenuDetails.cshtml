@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Food_Page.Models.Restaurent>
+
+<h2> Conquer the spice </h2>
+<style>
+    table{
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+    th{
+        background-color: ivory;
+        color: aqua; 
+        font-size: 20px;
+    }
+    body{
+        background-color: white;
+    }
+    h2{
+        color: brown;
+        text-align: justify;
+    }
+</style>
+<table>
+    <thead>
+        <tr>
+            <th>Sno</th>
+            <th>Item</th>
+            <th>Spice</th>
+            <th>Price</th>
+            <th> Details </th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var restaurent in Model)
+        {
+            <tr>
+                <td>@restaurent.Sno</td>
+                <td>@restaurent.Item</td>
+                <td>@restaurent.Spice</td>
+                <td>@restaurent.Price</td>
+                <td>@Html.ActionLink("Desciption", "GetItemBySno", new { Sno = restaurent.Sno } )    </td>
+            </tr>
+        }
+        
+    </tbody>
+
+</table>

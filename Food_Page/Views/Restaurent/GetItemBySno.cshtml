@@ -1,0 +1,21 @@
+﻿@model Food_Page.Models.Restaurent
+<h2> Item Details By Sno </h2>
+<style>
+    label{
+        width:20px;
+        padding-left:initial;
+
+    }
+    input{
+        margin-left:100px;
+    }
+    </style>
+
+<label> Sno</label>
+<input type="text" values="@Model.Sno " />
+<br />
+@Html.ActionLink("Enter", "ItemDetails")
+<br />
+
+@Html.ActionLink("Back to Menu", "GetMenuDetails")
+

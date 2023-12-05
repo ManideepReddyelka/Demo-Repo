@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Food_Page.Models.Restaurent>
+
+<h2> Conquer the spice </h2>
+<table>
+    <thead>
+        <tr>
+            <th>Sno</th>
+            <th>Item</th>
+            <th>Spice</th>
+            <th>Price</th>
+
+        </tr>
+        </thead>
+    <tbody>
+        @foreach(var restaurent in Model)
+            {
+        <tr>
+            <td>@restaurent.Sno</td>
+            <td>@restaurent.Item</td>
+            <td>@restaurent.Spice</td>
+            <td>@restaurent.Price</td>
+        </tr>
+            }
+
+    </tbody>
+
+    </table>
